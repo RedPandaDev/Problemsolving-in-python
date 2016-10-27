@@ -1,0 +1,49 @@
+1.
+
+width = 17
+height = 12.0
+delimiter = '.'
+
+(a) width ---- 17
+(b) width / 2 ---- 8.5
+(c) width // 2 ---- 8
+(d) height // 7  ---- 1
+(e) 1 + 2 * 5  --- 11
+(f) delimiter * 5 ----  .....
+
+
+2.
+
+a)
+>>> minutes = 3*60 +45
+>>> seconds = minutes *60 +2
+>>> seconds
+13502
+
+b)
+3h   45m    2s
+
+total 6149s
+>>> totalSeconds = 6149
+>>> seconds = totalSeconds % 60
+>>> totalMinutes = totalSeconds // 60
+>>> minutes = totalMinutes
+>>> minutes
+	102
+>>> hours = totalMinutes // 60
+>>> minutes = totalMinutes % 60
+>>> print(hours, minutes, seconds)
+1 42 29
+>>> 
+
+4.
+
+>>> math.sin(15)
+0.6502878401571168
+>>> 63**2.5
+31502.96086084608
+>>> math.sqrt(2498)
+49.9799959983992
+>>> math.pi
+3.141592653589793
+>>> 

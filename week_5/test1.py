@@ -17,8 +17,11 @@ def doomsday(y):
     x = 0
     w = 0
     day = 0
+
+    #Set x depending on the year
     if (y < 1900 and y >= 1800):
         x = 5
+        # Minus the year so we know the year of the century
         w = y - 1800
 
     elif (y < 2000 and y >= 1900):
@@ -51,18 +54,6 @@ def doomsday(y):
     if day != -1:
         day = x + d
         if day > 6:
+            # minus 7 as there is 0 for 7 days
             day -= 7
-
     return day
-
-
-def main():
-    #
-    return
-
-
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
