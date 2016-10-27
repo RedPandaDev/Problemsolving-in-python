@@ -3,12 +3,12 @@ s = "<%/$$<?@</^@?\@\?@$]$/(?!))[@(^//@\^?^@<^@(\%>(^?/<^?*!!!^([*@>(^(?[!?[/)&@
 
 
 def decrypt():
-	i = 0
+	i = 63
 
-	while i < 256:
+	while i < 124:
 		if (i > 64 and i < 91):
-			a = print(chr(i))
-			s.find(a)
+			print(chr(i))
+			#s.find(a)
 		if (i > 96 and i < 123):
 			b = print(chr(i))
 			s.find(b)
