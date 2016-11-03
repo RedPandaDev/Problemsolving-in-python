@@ -26,3 +26,7 @@ True
 def sumHighest(a, n):
     # Add code here
     a.sort()
+    sum(n)
+
+import doctest
+doctest.testmod()
