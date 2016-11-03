@@ -1,0 +1,3 @@
+sports_list = ["football", "rugby", "hockey", "tennis"]
+print(sports_list[0],sports_list[3])
+sports_list.append("cycling")
