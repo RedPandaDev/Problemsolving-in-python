@@ -24,4 +24,11 @@ True
 # *** DO NOT ADD ANY COMMENTS OF YOUR OWN IN THE SUBMITTED SOLUTION ***
 
 def sumHighest(a, n):
-	return sum(sorted(filter(lambda x: n > -1, a), reverse=True)[:n])
+	return function3(a,n)
+	
+def function3(a,n):
+	hi = sum(sorted(filter(lambda x: n > -1, a), reverse=True)[:n])
+	return hi
+
+import doctest
+doctest.testmod()
