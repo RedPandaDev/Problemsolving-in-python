@@ -24,7 +24,7 @@ True
 # *** DO NOT ADD ANY COMMENTS OF YOUR OWN IN THE SUBMITTED SOLUTION ***
 
 def sumHighest(a, n):
-    return sum(a[-n:])
+    return sum(sorted(a)[-n:]) 
 
 
 import doctest
