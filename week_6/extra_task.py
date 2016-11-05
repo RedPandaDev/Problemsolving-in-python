@@ -74,20 +74,23 @@
 # 	lightsarray = [False] * 50 ### All lights are off at start ###
 
 
-# 	lightsarray[::n] = [not y for y in lightsarray[::n]]# this shit works with n and no light
+# 	lightsarray[::n] = [not y for y in lightsarray[::n]]# this shit works
 
 
 def press_button(n):
 	lightsarray = [False] * 50 ### All lights are off at start ###
 
-#	light = 1
+	light = 1
 
 	 # this shit works with n and no light
 
-#	while light != n +1:
-	lightsarray[::-n] = [not y for y in lightsarray[::-n]]
+	while light != n +1:
+		lightsarray[::-light] = [not y for y in lightsarray[::-light]]
 #		print(light)
-#		light +=1
+		light +=1
+		lightsarray.reverse()
+
+#lightsarray[::-n] = [not y for y in lightsarray[::-n]]
 # ----- this shit is correct but backwards :o
 #  So flip the freaking arrray when returning
     
