@@ -74,7 +74,7 @@
 # 	lightsarray = [False] * 50 ### All lights are off at start ###
 
 
-# 	lightsarray[::n] = [not y for y in lightsarray[::n]]# this shit works
+# 	lightsarray[::n] = [not y for y in lightsarray[::n]]# this works
 
 
 def press_button(n, lights = 50):
