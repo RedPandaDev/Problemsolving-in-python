@@ -60,23 +60,27 @@ def rectangle(m, n):
 	return
 
 
-def weight_limit(limit=3000):
-	weights = [750, 387, 291, 712, 100, 622, 109, 750, 282]
+def weight_limit(limit=3000, max_weight = True):
+	weights = [750, 387, 291, 712, 100, 622, 109, 750, 282, 21, 50,67, 10, 120, 235, 420,  510, 311,196]
 	load = 0
 	i = 0
 	add = 0
-	
-	while load < limit:
-		while i != len(weights):
-			add = weights[i]
-			load += add
-
-			if load > limit:
-				load -=add
-				print("Total load:", load)
-				return
+	reject_list = []
+	while i != len(weights):
+		add = sorted(weights, reverse = max_weight)[i]
+		load += add
+		if load > limit:
+			load -=add
+			reject_list.append(add)
+		else:
 			print(add)
-			i+= 1
+		i+= 1
+	reject_load = sum(reject_list)
+
+	print("Pallets left:", reject_list)
+	print("Total weight left:",reject_load)
+	print("Total load:", end="")
+	return load
 
 # A = {1,2,3,4}
 # B = {3,4,5,6}
@@ -92,3 +96,16 @@ def weight_limit(limit=3000):
 # >>> A & A
 # {1, 2, 3, 4}
 # >>> 
+
+
+# def printStarCircle(i=0,j=0):
+
+# 	 while -10 < i :
+# 	 	while j < 10:
+# 	 		if i*i + j*j < 102:
+# 	 			print("*", end="")
+# 	 		else:
+# 	 			print(" ", end="")
+	 		
+# 	 		i-=1
+# 	 		j +=1
