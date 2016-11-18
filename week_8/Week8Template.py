@@ -28,15 +28,15 @@ True
 
 def sumRows(filename, header=False):
     # Add code here
-
-	with open(filename) as csvfile:
-		rdr = csv.reader(csvfile)
-		for row in rdr:
-			print("fuck you too")
-
+    dict_names = {}
+    with open(filename) as csvfile:
+    	rdr = csv.reader(csvfile)
+    	for row in rdr:
+    		print("")
+    return dict_names
 	
 def sumColumns(filename):
-	print("fuck you")
+	print("")
 
 
 import csv
