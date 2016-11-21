@@ -28,16 +28,54 @@ True
 
 def sumRows(filename, header=False):
     # Add code here
-    dict_names = {}
-    with open(filename) as csvfile:
-    	rdr = csv.reader(csvfile)
-    	for row in rdr:
-    		print("")
-    return dict_names
+	dict_names = {}
+	numList = []
+
+	with open(filename) as csvfile:
+		rdr = csv.reader(csvfile)
+
+		if header == True:
+			next(rdr)  # skip header row
+
+		for row in rdr:
+			numList = row[1::]
+			rowsSum = 0
+
+			for i in numList:
+				if isfloat(i) == True:
+					rowsSum += float(i)
+
+			dict_names.update({row[0]:rowsSum})
+
+	return dict_names
 	
 def sumColumns(filename):
-	print("")
+	# dict_names = {}
+	# numList = []
 
+	# with open(filename) as csvfile:
+	# 	rdr = csv.reader(csvfile)
+
+	# 	for row in rdr:
+	# 		numList = row[1::]
+	# 		rowsSum = 0
+
+	# 		for i in numList:
+	# 			if isfloat(i) == True:
+	# 				rowsSum += float(i)
+
+	# 		dict_names.update({row[0]:rowsSum})
+
+	# return dict_names
+
+
+
+def isfloat(value):
+	try:
+		float(value)
+		return True
+	except ValueError:
+		return False
 
 import csv
 
