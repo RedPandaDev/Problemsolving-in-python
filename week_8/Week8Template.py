@@ -44,33 +44,43 @@ def sumRows(filename, header=False):
 			for i in numList:
 				if isfloat(i) == True:
 					rowsSum += float(i)
+					# Check each value in a row and add it if it can be a float
 
 			dict_names.update({row[0]:rowsSum})
 
 	return dict_names
 	
 def sumColumns(filename):
-	# dict_names = {}
-	# numList = []
+	dict_names = {}
+	numList = []
+	name0 = 0
+	name1 = 0
+	name2 = 0
+	name3 = 0
 
-	# with open(filename) as csvfile:
-	# 	rdr = csv.reader(csvfile)
+	with open(filename) as csvfile:
+		rdr = csv.reader(csvfile)
+		row1 = next(rdr)
+		columnsNum = len(row1)
 
-	# 	for row in rdr:
-	# 		numList = row[1::]
-	# 		rowsSum = 0
+		# Need to get it to work dynamically but for loop in while doesn't work  
+		for row in rdr:
+			name0 += float(row[0])
+			name1 += float(row[1])
+			name2 += float(row[2])
 
-	# 		for i in numList:
-	# 			if isfloat(i) == True:
-	# 				rowsSum += float(i)
+		dict_names.update({row1[0]:name0})
+		dict_names.update({row1[1]:name1})
+		dict_names.update({row1[2]:name2})
+		dict_names.update({row1[3]:name3})
 
-	# 		dict_names.update({row[0]:rowsSum})
-
-	# return dict_names
+	return dict_names
 
 
 
 def isfloat(value):
+
+	# Check if list item can be a float
 	try:
 		float(value)
 		return True
